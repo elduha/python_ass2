@@ -1,5 +1,5 @@
-from pycoingecko import CoinGeckoAPI
-cg = CoinGeckoAPI()
-crp = cg.get_coins_markets(vs_currency='usd')
-print(crp)
-
+from bs4 import BeautifulSoup
+from selenium import webdriver
+z = input("- Choose any crypto here: ")
+        url = f'https://coinmarketcap.com/currencies/{z}/news/'
+        driver = webdriver.Firefox()
